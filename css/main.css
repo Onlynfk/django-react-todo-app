@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header__link {
+  border: 1px solid transparent;
+  padding: 0.5em;
+}
+
+.header__link:hover {
+  border-bottom: 1px solid red;
+  cursor: pointer;
+}
+
+.header__button {
+  border-radius: 0.1em;
+  border: 0.1em solid transparent;
+  cursor: pointer;
+}
+
+.header__button:hover {
+  border: 1px solid lightcoral;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
