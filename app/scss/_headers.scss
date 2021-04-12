@@ -1,5 +1,13 @@
 
-.header__link{
+
+header{
+    background-color:$base_color;
+
+}
+
+.header{    
+    
+    &__link{
     border: 1px solid transparent;
     padding: 0.5em;
     &:hover{
@@ -7,17 +15,58 @@
         cursor: pointer;
     }
 }
-
-.header__button{
-    border-radius: 0.1em;
-    border: 0.1em solid transparent;
-    cursor: pointer;
-
-
-&:hover{
-    border: 1px solid lightcoral;
-   
-    color: white;
+&__button{
+    border: 1px solid transparent;
+    padding: 0.5em;
+    &:hover{
+        border-bottom: 1px solid red;
+        color: white;
+        cursor: pointer;
+    }
 }
+}
+
+.headline{
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+    background-color: $base_color;
+    background-image: url('https://image.freepik.com/free-vector/task-management-abstract-concept-illustration_335657-2127.jpg');
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.icon{
+    margin-top: 1em;
+    text-align: center;
+    font-size: 100px;
+}
+
+.scroll_down{
+    text-align: center;
+    background-color: $base_color;
+    
+    &__arrow{
+        font-size: 30px;
+        margin-top: 5.5em ;    
+        &:hover{
+           
+            color: lightcoral;
+    }
+
+    }  
+}
+
+// features
+
+.features{
+    background-color: $base_color;
+
+}
+
+.about{
+    background-color: $base_color;
 
 }
