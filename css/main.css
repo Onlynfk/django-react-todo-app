@@ -6,6 +6,10 @@ body {
   color: #CACFD2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .body-bg {
   background-color: #0f0813;
   background-image: linear-gradient(315deg, #0c0610 0%, #0a1230 74%);
