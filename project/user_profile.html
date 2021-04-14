@@ -9,20 +9,121 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
+    <!-- plugins:css -->
+  <link rel="stylesheet" href="../app/dashboard/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../app/dashboard/vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../app/dashboard/css/style.css">
+  <!-- endinject -->
 
     <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
     <!--Replace with your tailwind.css once created-->
-
+<style>
+    body{
+        background-color: #17202A;
+    }
+</style>
 </head>
 
-<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover"
-    style="background-image:url('https://images.unsplash.com/photo-1604776159603-cacfe8f4b46f?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4NXw2c01WalRMU2tlUXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60https://images.unsplash.com/photo-1604776159603-cacfe8f4b46f?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4NXw2c01WalRMU2tlUXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60');">
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover">
 
+  <!-- partial:partials/_navbar.html -->
+  <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row shadow-sm back_color">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a href="dashboard.html" class="btn  btn-dark btn-rounded "> <i class="fas fa-arrow-left"></i>  </a>
 
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+      <h5 class="text-secondary btn btn-transparent"></h5>
+      <ul class="navbar-nav mr-lg-2">
 
+      </ul>
+      <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item dropdown mr-1">
+          <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+            id="messageDropdown" href="#" data-toggle="dropdown">
+            <i class="ti-email mx-0"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
+            <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+
+            <a class="dropdown-item">
+              <div class="item-thumbnail">
+                <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+              </div>
+              <div class="item-content flex-grow">
+                <h6 class="ellipsis font-weight-normal"> Johnson
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  Upcoming board meeting
+                </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+            data-toggle="dropdown">
+            <i class="ti-bell mx-0"></i>
+            <span class="count"></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+
+            <a class="dropdown-item">
+              <div class="item-thumbnail">
+                <div class="item-icon bg-info">
+                  <i class="ti-user mx-0"></i>
+                </div>
+              </div>
+              <div class="item-content">
+                <h6 class="font-weight-normal">New user registration</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  2 days ago
+                </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-profile dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+            <img src="images/faces/face28.jpg" alt="profile" />
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="user_profile.html">
+              <i class="ti-user text-primary"></i>
+              Profile
+            </a>
+            <a class="dropdown-item" href="user_profile.html">
+              <i class="ti-settings text-primary"></i>
+              Settings
+            </a>
+            <a class="dropdown-item">
+              <i class="ti-power-off text-primary"></i>
+              Logout
+            </a>
+          </div>
+        </li>
+      </ul>
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+        data-toggle="offcanvas">
+        <span class="ti-view-list"></span>
+      </button>
+    </div>
+  </nav>
+  <!-- partial -->
     <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
 
         <!--Main Col-->
@@ -53,7 +154,7 @@
 
                 <div class="pt-12 pb-8">
                     <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
-                        Get In Touch
+                        Edit 
                     </button>
                 </div>
 
@@ -152,6 +253,12 @@
         });
 
     </script>
+    
+  <!-- plugins:js -->
+  <script src="../app/dashboard/vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="../app/dashboard/vendors/chart.js/Chart.min.js"></script>
 
 </body>
 
