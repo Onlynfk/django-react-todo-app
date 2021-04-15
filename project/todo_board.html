@@ -16,37 +16,45 @@
   <link rel="stylesheet" href="../app/dashboard/css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
-<!-- fontawesome cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!--===== SORTABLE JS =====-->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
   <style type="text/css">
-    
-    .card_bg{
+    .card_bg {
       background-color: #212F3D;
       border-radius: 25px;
       border: 0.1em #212F3D;
     }
-    .back_color{
+
+    .back_color {
       background-color: #17202A;
     }
-    .space_nav li{
+
+    .space_nav li {
       margin: 0 0.2em;
     }
-    .space_nav a{
-     text-decoration: none;
+
+    .space_nav a {
+      text-decoration: none;
     }
-    .teams_box{
+
+    .teams_box {
       border-radius: 25px;
       background-color: #212F3D;
 
     }
   </style>
 </head>
+
 <body>
   <div class="container-scroller ">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row shadow-sm back_color">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a href="dashboard.html" class="btn  btn-dark btn-rounded "> <i class="fas fa-arrow-left"></i>  </a>
+        <a href="dashboard.html" class="btn  btn-dark btn-rounded "> <i class="fas fa-arrow-left"></i> </a>
         <!-- <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" class="mr-2" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a> -->
       </div>
@@ -57,29 +65,30 @@
           </button>
           <span class="bg-transparent"><i class="fas fa-star text-dark mr-3 "></i></span>
           <div>
-               <button type="button" class="btn  btn-icon-text text-secondary shadow-sm">
-                <i  class="fas fa-lock mr-1"></i> Make Private
-              </button>
-              <button type="button" class="btn  btn-icon-text text-secondary shadow-sm">
-                <i class="fa fa-user-plus mr-1" aria-hidden="true"></i> Invite
-              </button>
-              
+            <button type="button" class="btn  btn-icon-text text-secondary shadow-sm">
+              <i class="fas fa-lock mr-1"></i> Make Private
+            </button>
+            <button type="button" class="btn  btn-icon-text text-secondary shadow-sm">
+              <i class="fa fa-user-plus mr-1" aria-hidden="true"></i> Invite
+            </button>
+
           </div>
         </div>
-       <h5 class="text-secondary btn btn-transparent"></h5>
+        <h5 class="text-secondary btn btn-transparent"></h5>
         <ul class="navbar-nav mr-lg-2">
-         
+
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown mr-1">
-            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+              id="messageDropdown" href="#" data-toggle="dropdown">
               <i class="fas fa-users "></i></a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
               <p class="mb-0 font-weight-normal float-left dropdown-header">Team Members</p>
-              
+
               <a class="dropdown-item">
                 <div class="item-thumbnail">
-                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                  <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="item-content flex-grow">
                   <h6 class="ellipsis font-weight-normal"> Johnson
@@ -92,13 +101,14 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
               <i class="ti-bell mx-0"></i>
               <span class="count"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
               <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-              
+
               <a class="dropdown-item">
                 <div class="item-thumbnail">
                   <div class="item-icon bg-info">
@@ -116,14 +126,14 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+              <img src="images/faces/face28.jpg" alt="profile" />
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="user_profile.html">
                 <i class="ti-user text-primary"></i>
                 Profile
               </a>
-              <a class="dropdown-item">
+              <a class="dropdown-item" href="user_setting.html">
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
@@ -134,116 +144,117 @@
             </div>
           </li>
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
           <span class="ti-view-list"></span>
         </button>
       </div>
     </nav>
     <!-- partial -->
-    <div class="container-fluid page-body-wrapper back_color shadow-sm ">
+    <div class="container-fluid page-body-wrapper back_color shadow-sm">
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas back_color" id="sidebar">
         <ul class="nav">
-        
+
         </ul>
       </nav>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper back_color ">
           <div class="row">
-             <!--   list board -->
-              <div class="col-md-3 grid-margin stretch-card">
-                  <div class="card card_bg shadow-sm mr-4">
-                    <p class="card-title  text-white  text-center mt-3 ">To Do</p>
-                    <div class="card-body">
-                      <div class="card bg-dark border border-dark shadow-lg ">
+            <!--  Todo List Board Start -->
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card card_bg shadow-sm mr-4">
+                <p class="card-title  text-white  text-center mt-3">To Do</p>
+                <div class="card-body">
+                  <div class="card bg-dark border border-dark shadow-lg">
                     <div class="card-body">
                       <p class="card-title text-md-center text-xl-left">#2</p>
                       <p class="text-white bg-transparent">Planning to do the few..</p>
-                      <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i class="fas fa-list "></i></p>
+                      <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i
+                          class="fas fa-list "></i></p>
                     </div>
                   </div>
-                      <div
-                        class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                        <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
-                        <i class="fas fa-plus m-3 text-secondary "></i>
-                      </div>
-                      <p class="mb-0 mt-2 text-danger"></p>
-                    </div>
+                  <div
+                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
+                    <i class="fas fa-plus m-3 text-secondary "></i>
                   </div>
+                  <p class="mb-0 mt-2 text-danger"></p>
                 </div>
-                <!--   list board -->
-                <div class="col-md-3 grid-margin stretch-card">
-                <div class="card card_bg shadow-sm mr-4 ">
-                  <p class="card-title  text-white  text-center mt-3 ">Doing</p>
-                  <div class="card-body">
-                     <div class="card bg-dark border border-dark shadow-lg ">
-                  <div class="card-body">
-                    <p class="card-title text-md-center text-xl-left">#2</p>
-                    <p class="text-white bg-transparent">Currently doing this the few..</p>
-                    <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i class="fas fa-list "></i></p>
-                  </div>
-                </div>
-                    <div
-                      class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                      <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
-                      <i class="fas fa-plus m-3 text-secondary "></i>
+              </div>
+            </div>
+            <!--  Todo List Board End -->
+
+
+            <!--  Doing List Board Start -->
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card card_bg shadow-sm mr-4 ">
+                <p class="card-title  text-white  text-center mt-3">Doing</p>
+                <div class="card-body">
+                  <div class="card bg-dark border border-dark shadow-lg ">
+                    <div class="card-body">
+                      <p class="card-title text-md-center text-xl-left">#2</p>
+                      <p class="text-white bg-transparent">Currently doing this the few..</p>
+                      <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i
+                          class="fas fa-list "></i></p>
                     </div>
-                    <p class="mb-0 mt-2 text-danger"></p>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
+                    <i class="fas fa-plus m-3 text-secondary "></i>
+                  </div>
+                  <p class="mb-0 mt-2 text-danger"></p>
+                </div>
+              </div>
+            </div>
+          <!--  Doing List Board End -->
+
+
+          <!--  Done List Board Start -->
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card card_bg shadow-sm mr-4 ">
+                <p class="card-title  text-white  text-center mt-3 ">Done</p>
+                <div class="card-body">
+                  <div class="card bg-dark border border-dark shadow-lg ">
+                    <div class="card-body">
+                      <span class="text-secondary"><i class="fas fa-plus m-2"></i>Add a card</span>
+                    </div>
                   </div>
                 </div>
               </div>
-                <!--  new list board -->
-                <div class="col-md-3 grid-margin stretch-card">
-                <div class="card card_bg shadow-sm mr-4 ">
-                  <p class="card-title  text-white  text-center mt-3 ">Done</p>
-                  <div class="card-body">
-                     <div class="card bg-dark border border-dark shadow-lg ">
-                       <div class="card-body">
-                          <span class="text-secondary"><i class="fas fa-plus m-2"></i>Add a card</span>
-                      </div>
-                </div>                    
-                  </div>
-                </div>
-                </div>
-                 <!-- add new  list board -->
-                 <div class="col-md-3 grid-margin stretch-card">
-                   <div class="card bg-transparent border border-dark shadow-lg mr-4 ">
-                     <p class="card-title  text-white  text-center mt-3 "></p>
-                    <div class="card-body text-center mt-5">
-                      <span class="text-secondary text-center font-weight-light"><i class="fas fa-plus m-2 "></i>Add a another list</span>
-                    </div>
-                  </div>
-                </div>
-                
-                
+            </div>
+          <!--  Done List Board End -->
 
-                
-
+          <!-- add new  list board Start -->
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card bg-transparent border border-dark shadow-lg mr-4 ">
+                <p class="card-title  text-white  text-center mt-3 "></p>
+                <div class="card-body text-center mt-5">
+                  <span class="text-secondary text-center font-weight-light"><i class="fas fa-plus m-2 "></i>Add a
+                    another list</span>
+                </div>
               </div>
-              
-              
-    
+            </div>
+          <!-- add new  list board End -->
           </div>
-        
-          </div>
-          </div>
-        
-        
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-       <!--  <footer class="footer">
+        </div>
+      </div>
+
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <!--  <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
           </div>
         </footer> -->
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
+    <!-- partial -->
   </div>
+  <!-- main-panel ends -->
+  <!-- page-body-wrapper ends -->
   <!-- container-scroller -->
 
   <!-- plugins:js -->
@@ -259,9 +270,8 @@
   <script src="js/todolist.js"></script> -->
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="js/dashboard.js"></script>
+  <script src="/app/js/script.js"></script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
-
