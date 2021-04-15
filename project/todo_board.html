@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>RoyalUI Admin</title>
+  <title>My Learning Board</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="../app/dashboard/vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="../app/dashboard/vendors/base/vendor.bundle.base.css">
@@ -46,10 +46,26 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row shadow-sm back_color">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a href="dashboard.html" class="btn  btn-dark btn-rounded "> <i class="fas fa-arrow-left"></i>  </a>
         <!-- <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" class="mr-2" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a> -->
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <div class="d-flex justify-content-between align-items-center">
+          <button type="button" class="btn btn-transparent text-secondary font-weight-bold btn-icon-text ">
+            <i class="ti-clipboard btn-icon-prepend"></i>My Learning Board
+          </button>
+          <span class="bg-transparent"><i class="fas fa-star text-dark mr-3 "></i></span>
+          <div>
+               <button type="button" class="btn  btn-icon-text text-secondary shadow-sm">
+                <i  class="fas fa-lock mr-1"></i> Make Private
+              </button>
+              <button type="button" class="btn  btn-icon-text text-secondary shadow-sm">
+                <i class="fa fa-user-plus mr-1" aria-hidden="true"></i> Invite
+              </button>
+              
+          </div>
+        </div>
        <h5 class="text-secondary btn btn-transparent"></h5>
         <ul class="navbar-nav mr-lg-2">
          
@@ -57,10 +73,9 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown mr-1">
             <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
-              <i class="ti-email mx-0"></i>
-            </a>
+              <i class="fas fa-users "></i></a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
-              <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Team Members</p>
               
               <a class="dropdown-item">
                 <div class="item-thumbnail">
@@ -91,7 +106,7 @@
                   </div>
                 </div>
                 <div class="item-content">
-                  <h6 class="font-weight-normal">New user registration</h6>
+                  <h6 class="font-weight-normal">Todo Added</h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
                     2 days ago
                   </p>
@@ -136,62 +151,81 @@
       <div class="main-panel">
         <div class="content-wrapper back_color ">
           <div class="row">
-            <div class="col-md-12 grid-margin">
-             
-              
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-transparent space_nav">
-                  <li class="breadcrumb-item btn card_bg"><a href="dashboard.html"> <i class="fas fa-clipboard-list"></i> Your Boards</a></li>
-                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> <i class="fas fa-users"></i> Teams</li>
-                
-                </ol>
-              </nav>
-              <div class="d-flex justify-content-between align-items-center">
-                
-                <div>
-                  <!--   <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Create New Board
-                    </button> -->
-                    
+             <!--   list board -->
+              <div class="col-md-3 grid-margin stretch-card">
+                  <div class="card card_bg shadow-sm mr-4">
+                    <p class="card-title  text-white  text-center mt-3 ">To Do</p>
+                    <div class="card-body">
+                      <div class="card bg-dark border border-dark shadow-lg ">
+                    <div class="card-body">
+                      <p class="card-title text-md-center text-xl-left">#2</p>
+                      <p class="text-white bg-transparent">Planning to do the few..</p>
+                      <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i class="fas fa-list "></i></p>
+                    </div>
+                  </div>
+                      <div
+                        class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                        <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
+                        <i class="fas fa-plus m-3 text-secondary "></i>
+                      </div>
+                      <p class="mb-0 mt-2 text-danger"></p>
+                    </div>
+                  </div>
+                </div>
+                <!--   list board -->
+                <div class="col-md-3 grid-margin stretch-card">
+                <div class="card card_bg shadow-sm mr-4 ">
+                  <p class="card-title  text-white  text-center mt-3 ">Doing</p>
+                  <div class="card-body">
+                     <div class="card bg-dark border border-dark shadow-lg ">
+                  <div class="card-body">
+                    <p class="card-title text-md-center text-xl-left">#2</p>
+                    <p class="text-white bg-transparent">Currently doing this the few..</p>
+                    <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i class="fas fa-list "></i></p>
+                  </div>
+                </div>
+                    <div
+                      class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                      <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
+                      <i class="fas fa-plus m-3 text-secondary "></i>
+                    </div>
+                    <p class="mb-0 mt-2 text-danger"></p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8 grid-margin">
-              <div class="d-flex justify-content-between align-items-center p-4 shadow-sm teams_box">
-                <div class="d-flex justify-space-between align-items-center">
-                  <img src="images/faces/face3.jpg" alt="image" width="60px" height="60px" class="profile-pic rounded-circle mr-2">
-                  <h4 class="font-weight-bold mb-0 m-lg-4 text-secondary ">Mark Zach</h4>
+                <!--  new list board -->
+                <div class="col-md-3 grid-margin stretch-card">
+                <div class="card card_bg shadow-sm mr-4 ">
+                  <p class="card-title  text-white  text-center mt-3 ">Done</p>
+                  <div class="card-body">
+                     <div class="card bg-dark border border-dark shadow-lg ">
+                       <div class="card-body">
+                          <span class="text-secondary"><i class="fas fa-plus m-2"></i>Add a card</span>
+                      </div>
+                </div>                    
+                  </div>
                 </div>
-                <div class="d-flex justify-content-center align-items-center" >
-                  <button type="button" class="btn btn-outline-primary btn-icon-text btn-rounded mr-3  btn-sm">
-                    <i class="fas fa-edit"></i> Edit
-                   </button>
-                    <button type="button" class="btn btn-outline-secondary btn-icon-text btn-rounded btn-sm ">
-                      <i class="fas fa-user-times"></i> Remove
-                    </button>
-                    
                 </div>
-              </div>
+                 <!-- add new  list board -->
+                 <div class="col-md-3 grid-margin stretch-card">
+                   <div class="card bg-transparent border border-dark shadow-lg mr-4 ">
+                     <p class="card-title  text-white  text-center mt-3 "></p>
+                    <div class="card-body text-center mt-5">
+                      <span class="text-secondary text-center font-weight-light"><i class="fas fa-plus m-2 "></i>Add a another list</span>
+                    </div>
+                  </div>
+                </div>
+                
+                
 
-              <div class="d-flex justify-content-between align-items-center p-4 shadow-sm mt-3 teams_box ">
-                <div class="d-flex justify-space-between align-items-center ">
-                  <img src="images/faces/face3.jpg" alt="image" width="60px" height="60px" class="profile-pic rounded-circle mr-2">
-                  <h4 class="font-weight-bold mb-0 m-lg-4 text-secondary ">Luke Sam</h4>
-                </div>
-                <div class="d-flex justify-content-center align-items-center" >
-                  <button type="button" class="btn btn-outline-primary btn-icon-text btn-rounded mr-3  btn-sm">
-                    <i class="fas fa-edit"></i> Edit
-                   </button>
-                    <button type="button" class="btn btn-outline-secondary btn-icon-text btn-rounded btn-sm ">
-                      <i class="fas fa-user-times"></i> Remove
-                    </button>
-                    
-                </div>
+                
+
               </div>
-            </div>
+              
+              
+    
           </div>
+        
           </div>
           </div>
         
