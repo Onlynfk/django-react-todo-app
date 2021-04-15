@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Setting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../app/dashboard/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../app/dashboard/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../app/dashboard/css/style.css">
+    <!-- endinject -->
+
+    <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> -->
+    <!-- CDN tailwind.css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+    <style>
+        body {
+            background-color: #17202A;
+        }
+        .nav-pills .nav-link.active {
+            color: aliceblue;
+            background-color: black;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: rgb(8, 30, 49);
+        }
+
+        p {
+            color: aliceblue;
+        }
+
+        .list-group-item {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover mt-10 p-10">
+
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row shadow-sm back_color">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a href="dashboard.html" class="btn  btn-dark btn-rounded "> <i class="fas fa-arrow-left"></i> </a>
+
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <h5 class="text-secondary btn btn-transparent"></h5>
+            <ul class="navbar-nav mr-lg-2">
+
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown mr-1">
+                    <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                        id="messageDropdown" href="#" data-toggle="dropdown">
+                        <i class="ti-email mx-0"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
+                        <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+
+                        <a class="dropdown-item">
+                            <div class="item-thumbnail">
+                                <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                            </div>
+                            <div class="item-content flex-grow">
+                                <h6 class="ellipsis font-weight-normal"> Johnson
+                                </h6>
+                                <p class="font-weight-light small-text text-black mb-0">
+                                    Upcoming board meeting
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                        data-toggle="dropdown">
+                        <i class="ti-bell mx-0"></i>
+                        <span class="count"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                        aria-labelledby="notificationDropdown">
+                        <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+
+                        <a class="dropdown-item">
+                            <div class="item-thumbnail">
+                                <div class="item-icon bg-info">
+                                    <i class="ti-user mx-0"></i>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h6 class="font-weight-normal">New user registration</h6>
+                                <p class="font-weight-light small-text mb-0 text-black">
+                                    2 days ago
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item nav-profile dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                        <img src="images/faces/face28.jpg" alt="profile" />
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="user_profile.html">
+                            <i class="ti-user text-primary"></i>
+                            Profile
+                        </a>
+                        <a class="dropdown-item" href="user_setting.html">
+                            <i class="ti-settings text-primary"></i>
+                            Settings
+                        </a>
+                        <a class="dropdown-item">
+                            <i class="ti-power-off text-primary"></i>
+                            Logout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                data-toggle="offcanvas">
+                <span class="ti-view-list"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container bg-gray-200 pt-4 pb-10">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+            </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+
+        <div class="row gutters-sm">
+            <div class="col-md-4 d-none d-md-block">
+                <div class="card">
+                    <div class="card-body">
+                        <nav class="nav flex-column nav-pills nav-gap-y-1">
+                            <a href="#profile" data-toggle="tab"
+                                class="nav-item nav-link has-icon nav-link-faded active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-user mr-2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>Profile Information
+                            </a>
+                            <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-settings mr-2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                    </path>
+                                </svg>Account Settings
+                            </a>
+                            <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-shield mr-2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>Security
+                            </a>
+                            <a href="#notification" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-bell mr-2">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>Notification
+                            </a>
+                            <a href="#billing" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-credit-card mr-2">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                </svg>Billing
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header border-bottom mb-3 d-flex d-md-none">
+                        <ul class="nav nav-tabs card-header-tabs nav-gap-x-1" role="tablist">
+                            <li class="nav-item">
+                                <a href="#profile" data-toggle="tab" class="nav-link has-icon active"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-user">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#account" data-toggle="tab" class="nav-link has-icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-settings">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#security" data-toggle="tab" class="nav-link has-icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-shield">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#notification" data-toggle="tab" class="nav-link has-icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-bell">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#billing" data-toggle="tab" class="nav-link has-icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-credit-card">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <h6>YOUR PROFILE INFORMATION</h6>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        aria-describedby="fullNameHelp" placeholder="Enter your fullname"
+                                        value="Kenneth Valdez">
+                                    <small id="fullNameHelp" class="form-text text-black">Your name may appear around
+                                        here where you are mentioned. You can change or remove it at any time.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Your Bio</label>
+                                    <textarea class="form-control autosize" id="bio"
+                                        placeholder="Write something about you"
+                                        style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 62px;">A front-end developer that focus more on user interface design, a web interface wizard, a connector of awesomeness.</textarea>
+                                </div>
+
+
+                                <div class="form-group small text-black">
+                                    All of the fields on this page are optional and can be deleted at any time, and by
+                                    filling them out, you're giving us consent to share this data wherever your user
+                                    profile appears.
+                                </div>
+                                <button type="button" class="btn btn-dark">Update Profile</button>
+                                <button type="reset" class="btn btn-light">Reset Changes</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="account">
+                            <h6>ACCOUNT SETTINGS</h6>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username"
+                                        aria-describedby="usernameHelp" placeholder="Enter your username"
+                                        value="kennethvaldez">
+                                    <small id="usernameHelp" class="form-text text-black
+                                    ">After changing your username,
+                                        your old username becomes available for anyone else to claim.</small>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="d-block text-danger">Delete Account</label>
+                                    <p class="text-black font-size-sm">Once you delete your account, there is no going
+                                        back. Please be certain.</p>
+                                </div>
+                                <button class="btn btn-danger" type="button">Delete Account</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="security">
+                            <h6>SECURITY SETTINGS</h6>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label class="d-block">Change Password</label>
+                                    <input type="text" class="form-control" placeholder="Enter your old password">
+                                    <input type="text" class="form-control mt-1" placeholder="New password">
+                                    <input type="text" class="form-control mt-1" placeholder="Confirm new password">
+                                </div>
+                            </form>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label class="d-block">Two Factor Authentication</label>
+                                    <button class="btn btn-info" type="button">Enable two-factor authentication</button>
+                                    <p class="small text-black mt-2">Two-factor authentication adds an additional layer
+                                        of security to your account by requiring more than just a password to log in.
+                                    </p>
+                                </div>
+                            </form>
+                            <hr>
+
+                        </div>
+                    <div class="tab-pane" id="notification">
+                            <h6>NOTIFICATION SETTINGS</h6>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label class="d-block mb-0">Security Alerts</label>
+                                    <div class="small text-black mb-3">Receive security alert notifications via email
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1"
+                                            checked="">
+                                        <label class="custom-control-label" for="customCheck1">Email each time a
+                                            vulnerability is found</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2"
+                                            checked="">
+                                        <label class="custom-control-label" for="customCheck2">Email a digest summary of
+                                            vulnerability</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label class="d-block">SMS Notifications</label>
+                                    <ul class="list-group list-group-sm">
+                                        <li class="list-group-item has-icon text-black">
+                                            Comments
+                                            <div class="custom-control custom-control-nolabel custom-switch ml-auto ">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1"
+                                                    checked="">
+                                                <label class="custom-control-label" for="customSwitch1"></label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item has-icon text-black">
+                                            Updates From People
+                                            <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                <label class="custom-control-label" for="customSwitch2"></label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item has-icon text-black">
+                                            Reminders
+                                            <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch3"
+                                                    checked="">
+                                                <label class="custom-control-label" for="customSwitch3"></label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item has-icon text-black">
+                                            Events
+                                            <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch4"
+                                                    checked="">
+                                                <label class="custom-control-label" for="customSwitch4"></label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item has-icon text-black">
+                                            Pages You Follow
+                                            <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                                <label class="custom-control-label" for="customSwitch5"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    <div class="tab-pane" id="billing">
+                        <h6>BILLING SETTINGS</h6>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <label class="d-block mb-0">Payment Method</label>
+                                <div class="small text-black mb-3">You have not added a payment method</div>
+                                <button class="btn btn-info" type="button">Add Payment Method</button>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label class="d-block">Payment History</label>
+                                <div class="border border-gray-500 bg-gray-200 p-3 text-center font-size-sm">You
+                                        have not made any payment.</div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- plugins:js -->
+    <script src="../app/dashboard/vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../app/dashboard/vendors/chart.js/Chart.min.js"></script>
+
+</body>
+
+</html>
