@@ -46,6 +46,9 @@
       background-color: #212F3D;
 
     }
+    .icon_bottom{
+
+    }
   </style>
 </head>
 
@@ -161,12 +164,22 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper back_color ">
-          <div class="row">
+          <div class="row"  id="example5" class="card">
             <!--  Todo List Board Start -->
             <div class="col-md-3 grid-margin stretch-card">
-              <div class="card card_bg shadow-sm mr-4">
+              <div class="card card_bg shadow-sm mr-4 handle">
                 <p class="card-title  text-white  text-center mt-3">To Do</p>
-                <div class="card-body">
+                <div class="card-body"  id="example2Left">
+                    <!-- card one -->
+                  <div class="card bg-dark border border-dark shadow-lg mb-2 mt-2">
+                    <div class="card-body">
+                      <p class="card-title text-md-center text-xl-left">#2</p>
+                      <p class="text-white bg-transparent">My First todo  app</p>
+                      <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i
+                          class="fas fa-list "></i></p>
+                    </div>
+                  </div>
+                  <!-- card two -->
                   <div class="card bg-dark border border-dark shadow-lg">
                     <div class="card-body">
                       <p class="card-title text-md-center text-xl-left">#2</p>
@@ -175,12 +188,10 @@
                           class="fas fa-list "></i></p>
                     </div>
                   </div>
-                  <div
-                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
-                    <i class="fas fa-plus m-3 text-secondary "></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-danger"></p>
+                </div>
+                <div class=" d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                  <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
+                  <i class="fas fa-plus m-3 text-secondary "></i>
                 </div>
               </div>
             </div>
@@ -189,23 +200,22 @@
 
             <!--  Doing List Board Start -->
             <div class="col-md-3 grid-margin stretch-card">
-              <div class="card card_bg shadow-sm mr-4 ">
-                <p class="card-title  text-white  text-center mt-3">Doing</p>
-                <div class="card-body">
-                  <div class="card bg-dark border border-dark shadow-lg ">
+              <div class="card card_bg shadow-sm mr-4 handle ">
+                <p class="card-title  text-white  text-center mt-3 ">Doing</p>
+                <div class="card-body" id="example2Right">
+                  <div class="card bg-dark border border-dark shadow-lg mb-2 mt-2">
                     <div class="card-body">
                       <p class="card-title text-md-center text-xl-left">#2</p>
-                      <p class="text-white bg-transparent">Currently doing this the few..</p>
+                      <p class="text-white bg-transparent">Currently the few..</p>
                       <p class="mb-0 mt-2 text-white"><i class="fas fa-calendar  text-warning mr-2"></i> <i
                           class="fas fa-list "></i></p>
                     </div>
                   </div>
-                  <div
-                    class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
-                    <i class="fas fa-plus m-3 text-secondary "></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-danger"></p>
+                  
+                </div>
+                <div class=" d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                  <h4 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h4>
+                  <i class="fas fa-plus m-3 text-secondary "></i>
                 </div>
               </div>
             </div>
@@ -214,7 +224,7 @@
 
           <!--  Done List Board Start -->
             <div class="col-md-3 grid-margin stretch-card">
-              <div class="card card_bg shadow-sm mr-4 ">
+              <div class="card card_bg shadow-sm mr-4 handle">
                 <p class="card-title  text-white  text-center mt-3 ">Done</p>
                 <div class="card-body">
                   <div class="card bg-dark border border-dark shadow-lg ">
@@ -229,7 +239,7 @@
 
           <!-- add new  list board Start -->
             <div class="col-md-3 grid-margin stretch-card">
-              <div class="card bg-transparent border border-dark shadow-lg mr-4 ">
+              <div class="card bg-transparent border border-dark shadow-lg mr-4 handle ">
                 <p class="card-title  text-white  text-center mt-3 "></p>
                 <div class="card-body text-center mt-5">
                   <span class="text-secondary text-center font-weight-light"><i class="fas fa-plus m-2 "></i>Add a
@@ -239,6 +249,8 @@
             </div>
           <!-- add new  list board End -->
           </div>
+
+
         </div>
       </div>
 
