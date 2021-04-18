@@ -45,6 +45,9 @@
     .space_nav a {
       text-decoration: none;
     }
+    .modal_bg{
+      background: #154360 transparent;
+    }
   </style>
 </head>
 
@@ -151,7 +154,7 @@
 
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent space_nav">
-                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> <i class="fas fa-clipboard-list"></i> <a href="{% url 'todo_board' %}">Your Boards</a></li>
+                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> <i class="fas fa-clipboard-list"></i> Your Boards</li>
                   <li class="breadcrumb-item btn card_bg">
                   <a href="{% url 'teams' %}"><i class="fas fa-users"></i>Teams</a>
                   </li>
@@ -173,7 +176,7 @@
           <div class="row">
             <div class="col-md-3 grid-margin stretch-card ">
               <div class="card card_bg shadow-sm   ">
-                <a href="todo_board.html">
+                <a href="{% url 'todo_board'%}">
                   <div class="card-body">
                     <p class="card-title text-md-center text-xl-left">2/10/21</p>
                     <div
@@ -229,14 +232,15 @@
           </div>
           <div class="col-md-3 grid-margin stretch-card">
             <div class="card bg-transparent border-dark shadow-sm ">
-              <div class="card-body">
-                <div
-                  class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+            <a href="#" data-toggle="modal" data-target="#boardId" class="text-decoration-none">
+              <div class="card-body" class="text-decoration-none">
+                <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
                   <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-white"></h3>
                   <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-secondary"> +</h3>
                 </div>
-                <p class="mb-0 mt-2 text-secondary text-sm">Create new board</p>
+                <h5 class="mb-5 text-secondary text-sm">Create new board</h5>
               </div>
+            </a>
             </div>
           </div>
         </div>
@@ -257,7 +261,7 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-
+{% include './modal/_new_board.html' %}
   <!-- plugins:js -->
   <script src="{% static '/assets/app/dashboard/vendors/base/vendor.bundle.base.js' %}"></script>
   <!-- endinject -->
