@@ -151,10 +151,9 @@
 
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent space_nav">
-                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> <i
-                      class="fas fa-clipboard-list"></i> Your Boards</li>
+                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> <i class="fas fa-clipboard-list"></i> <a href="{% url 'todo_board' %}">Your Boards</a></li>
                   <li class="breadcrumb-item btn card_bg">
-                  <a href="teams.html"><i class="fas fa-users"></i>Teams</a>
+                  <a href="{% url 'teams' %}"><i class="fas fa-users"></i>Teams</a>
                   </li>
 
 
