@@ -64,7 +64,7 @@
               
               <a class="dropdown-item">
                 <div class="item-thumbnail">
-                    <img src="{% static '/assets/images/faces/face3' %}".jpg" alt="image" class="profile-pic">
+                    <img src="{% static '/assets/images/faces/face3.jpg' %}" alt="image" class="profile-pic">
                 </div>
                 <div class="item-content flex-grow">
                   <h6 class="ellipsis font-weight-normal"> Johnson
@@ -101,14 +101,14 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="/assets/images/faces/face28.jpg" alt="profile"/>
+              <img src="{% static '/assets/images/faces/face28.jpg' %}" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="user_profile.html">
+              <a class="dropdown-item" href="{% url 'user_profile' %}">
                 <i class="ti-user text-primary"></i>
                 Profile
               </a>
-              <a class="dropdown-item"  href="user_setting.html">
+              <a class="dropdown-item"  href="{% url 'user_settings' %}">
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
@@ -141,8 +141,12 @@
               
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent space_nav">
-                  <li class="breadcrumb-item btn card_bg"><a href="{% url 'dashboard' %}"> <i class="fas fa-clipboard-list"></i> Your Boards</a></li>
-                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> <i class="fas fa-users"></i> Teams</li>
+                  <li class="breadcrumb-item btn card_bg"><a href="{% url 'dashboard' %}">
+                  <i class="fas fa-clipboard-list"></i> Your Boards</a></li>
+                  {% comment %}                   
+                  <li class="breadcrumb-item btn card_bg active" aria-current="page"> 
+                  <i class="fas fa-users"></i> <a href="{% url 'teams' %}">Teams</a></li>
+                  {% endcomment %}
                 
                 </ol>
               </nav>

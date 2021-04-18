@@ -8,6 +8,9 @@ def home(request):
 def dashboard(request):
     return render(request, 'todList/dashboard.html')
 
+def teams(request):
+    return render(request, 'todList/teams.html')
+
 
 def todo_board(request):
     return render(request, 'todList/todo_board.html')
