@@ -28,6 +28,9 @@
     body{
         background-color: #17202A;
     }
+    .modal_bg{
+      background: #154360 transparent;
+    }
 </style>
 </head>
 
@@ -143,7 +146,7 @@
 
 
                 <div class="pt-12 pb-8">
-                    <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
+                    <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" data-toggle="modal" data-target="#profileId">
                         Edit 
                     </button>
                 </div>
@@ -181,6 +184,8 @@
         </div>
 
     </div>
+    {% include './modal/_edit_profile.html' %}
+
 
     <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@4"></script>
