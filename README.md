@@ -10,11 +10,11 @@ A fully functional todo django/react app >> Work in Progress 😊
 $ git clone https://github.com/Onlynfk/django-react-todo-app.git
 $ cd django-react-todo-app
 ```
-3. Install [pipenv](https://pypi.org/project/pipenv/), a python virtual environment manager. Install backend dependencies and run migrations to create database. Default database is SQLite.
+* Install [pipenv](https://pypi.org/project/pipenv/), a python virtual environment manager. 
 
 * Before you start you are to open  two terminals one for backend and another for frontend
 
-4. Now ensure you are in root directory to install the backend servers (first terminal)
+3. Now ensure you are in root directory to install the backend servers (first terminal)
 ```  
 $ pipenv shell
 $ pip install -r requirements.txt
