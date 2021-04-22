@@ -28,7 +28,7 @@ $ cd frontend
 $ yarn install or npm install
 $ npm run dev
 ```
-5. View on your browser ( to see the it's working)
+5. View on your browser ( to see  it's working)
 ```
 http://127.0.0.1:8000/frontend/
 
