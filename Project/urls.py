@@ -17,8 +17,15 @@ from django.contrib import admin
 from django.urls import include,path
 
 urlpatterns = [
+    # Django admin
     path('admin/', admin.site.urls),
+    
+    # Local apps
     path('', include('TodList.urls')),
     path('api/', include('api.urls')),
     path('frontend/', include('frontend.urls')),
+
+    # DRF User management 
+    # path('api/rest-auth/', include('rest_auth.urls')),
+
 ]
